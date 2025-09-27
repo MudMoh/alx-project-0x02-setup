@@ -1,28 +1,24 @@
 import React from "react";
 import { type ButtonProps } from "@/interfaces";
-import { type ButtonSize } from "@/interfaces";
-import { type ButtonShape } from "@/interfaces";
 
-
-const sizeClasses: Record<ButtonSize, string> = {
-  small: "px-2 py-1 text-sm",
-  medium: "px-4 py-2 text-base",
-  large: "px-6 py-3 text-lg",
+const sizeClasses: Record<string, string> = {
+  small: "px-3 py-1 text-sm",
+  medium: "px-5 py-2 text-base",
+  large: "px-7 py-3 text-lg",
 };
 
-const shapeClasses: Record<ButtonShape, string> = {
+const shapeClasses: Record<string, string> = {
   "rounded-sm": "rounded-sm",
   "rounded-md": "rounded-md",
   "rounded-full": "rounded-full",
-  "rounded-lg": "rounded-lg",
 };
 
 const Button: React.FC<ButtonProps> = ({
   title,
-  size = "medium",
   shape = "rounded-md",
-  className = "",
+  size = "medium",
   styles = "",
+  className = "",
   onClick,
 }) => {
   return (
