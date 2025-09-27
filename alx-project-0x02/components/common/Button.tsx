@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonProps } from "@/interfaces";
+import { type ButtonProps } from "@/interfaces";
 
 const sizeStyles = {
   small: { padding: "4px 12px", fontSize: "0.85rem" },
