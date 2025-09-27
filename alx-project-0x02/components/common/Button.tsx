@@ -1,5 +1,7 @@
 import React from "react";
-import { type ButtonProps, type ButtonSize, type ButtonShape } from "@/interfaces";
+import { type ButtonProps } from "@/interfaces";
+import { type ButtonSize } from "@/interfaces";
+import { type ButtonShape } from "@/interfaces";
 
 
 const sizeClasses: Record<ButtonSize, string> = {
