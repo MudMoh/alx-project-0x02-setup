@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from '../components/common/Card';
+import Card from '@/components/common/Card';
 
 const Home = () => {
   return (
     <div>
       <h1>Home</h1>
-      <Card title="Welcome" content={<p>This is the home page.</p>} />
-      <Card title="About" content={<p>Learn more about us.</p>} />
+      <Card title="Welcome" content="This is the home page."/>
+      <Card title="About" content="Learn more about us." />
     </div>
   );
 };
