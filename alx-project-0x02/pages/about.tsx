@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 const About: React.FC =  () => {
   return (
-    <div>
+      <div>
+        <Header/>
         <h1 className="text-xl font-extralight">About Page</h1>
         
         <h2>Button Variants</h2>

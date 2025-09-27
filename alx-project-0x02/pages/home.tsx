@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from '@/components/common/Card';
 import PostModal from '@/components/common//PostModal';
+import Header from "@/components/layout/Header";
 import { type Post } from '@/interfaces';
 
 
@@ -21,7 +22,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-     
+     <Header/>
       <PostModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
