@@ -4,12 +4,30 @@ const About: React.FC =  () => {
   return (
     <div>
         <h1 className="text-xl font-extralight">About Page</h1>
-        <div>
-            <h2>Button Variants</h2>
-            <Button size="small" shape="rounded-sm">Small Rounded-sm</Button>
-            <Button size="medium" shape="rounded-md">Medium Rounded-md</Button>
-            <Button size="large" shape="rounded-full">Large Rounded-full</Button>
-        </div>
+        
+        <h2>Button Variants</h2>
+           <Button
+            title="Small Rounded-sm"
+            shape="rounded-sm"
+            size="small"
+            styles=""
+            onClick={() => alert("Small Rounded-sm Button clicked!")}/>
+      
+        
+           <Button
+            title="Medium Rounded-md"
+            shape="rounded-md"
+            size="medium"
+            styles=""
+            onClick={() => alert("Medium Rounded-md Button clicked!")}/>
+      
+          
+           <Button
+            title="Large Rounded-full"
+            shape="rounded-full"
+            size="large"
+            styles=""
+            onClick={() => alert("Large Rounded-full Button clicked!")}/>
     </div>
   )
 }

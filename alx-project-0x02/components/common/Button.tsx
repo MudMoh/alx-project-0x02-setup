@@ -1,42 +1,36 @@
 import React from "react";
-import { type ButtonProps } from "@/interfaces";
+import { type ButtonProps, type ButtonSize, type ButtonShape } from "@/interfaces";
 
-const sizeStyles = {
-  small: { padding: "4px 12px", fontSize: "0.85rem" },
-  medium: { padding: "8px 20px", fontSize: "1rem" },
-  large: { padding: "12px 28px", fontSize: "1.15rem" },
+
+const sizeClasses: Record<ButtonSize, string> = {
+  small: "px-2 py-1 text-sm",
+  medium: "px-4 py-2 text-base",
+  large: "px-6 py-3 text-lg",
 };
 
-const shapeStyles = {
-  "rounded-sm": { borderRadius: "4px" },
-  "rounded-md": { borderRadius: "12px" },
-  "rounded-full": { borderRadius: "999px" },
+const shapeClasses: Record<ButtonShape, string> = {
+  "rounded-sm": "rounded-sm",
+  "rounded-md": "rounded-md",
+  "rounded-full": "rounded-full",
+  "rounded-lg": "rounded-lg",
 };
 
 const Button: React.FC<ButtonProps> = ({
-    size = "medium",
-    shape = "rounded-md",
-    children,
-    onClick,
-    type = "button",
+  title,
+  size = "medium",
+  shape = "rounded-md",
+  className = "",
+  styles = "",
+  onClick,
 }) => {
-    return (
-        <button
-            type={type}
-            onClick={onClick}
-            style={{
-                background: "#007bff",
-                color: "#fff",
-                border: "none",
-                cursor: "pointer",
-                ...sizeStyles[size],
-                ...shapeStyles[shape],
-                margin: "8px",
-                transition: "background 0.2s",
-            }}>
-            {children}
-        </button>
-    )
+  return (
+    <button
+      className={`bg-blue-500 text-white font-semibold ${sizeClasses[size]} ${shapeClasses[shape]} ${className} ${styles}`}
+      onClick={onClick}
+    >
+      {title}
+    </button>
+  );
 };
 
 export default Button;
